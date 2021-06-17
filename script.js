@@ -2,7 +2,6 @@
 const slider = document.querySelector('.slider-container'),
   slides = Array.from(document.querySelectorAll('.slide'))
 
-// set up our state
 let isDragging = false,
   startPos = 0,
   currentTranslate = 0,
@@ -40,7 +39,6 @@ function getPositionX(event) {
   return event.type.includes('mouse') ? event.pageX : event.touches[0].clientX
 }
 
-// use a HOF so we have index in a closure
 function touchStart(index) {
   return function (event) {
     currentIndex = index
